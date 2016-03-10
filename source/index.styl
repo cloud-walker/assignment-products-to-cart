@@ -1,2 +1,21 @@
-body:before
-	content: 'css init'
+@require 'presentation'
+
+.container
+	display: flex
+	align-items: flex-start
+
+.products
+	flex: 1
+
+	&__item
+		padding: $spacing-unit
+		border: 1px solid $color-text-default-divider
+		box-shadow: 0 2px 5px -2px $color-text-default-divider
+
+		& + &
+			margin-top: @padding
+.cart
+	padding: $spacing-unit
+	border: 1px solid $color-text-default-divider
+	box-shadow: 0 2px 5px -2px $color-text-default-divider
+	margin-left: $spacing-unit-double
