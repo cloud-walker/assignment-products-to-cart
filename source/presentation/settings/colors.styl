@@ -1,17 +1,22 @@
 $color-default ?= hsl(0, 0%, 100%)
+$color-default-dark ?= hsl(0, 0%, 81%)
 $color-text-default ?= hsla(0, 0%, 0%, 87%)
 $color-text-default-secondary ?= hsla(0, 0%, 0%, 54%)
 $color-text-default-disabled ?= hsla(0, 0%, 0%, 38%)
 $color-text-default-divider ?= hsla(0, 0%, 0%, 20%)
 
+$color-trenitalia ?= #006367
+$color-italo ?= #B11E08
+
 $color-primary ?= hsl(196, 95%, 47%)
+$color-primary-dark ?= hsl(196, 95%, 40%)
 $color-text-primary ?= $color-default
 
 $color-cta ?= hsl(15, 100%, 60%)
 $color-text-cta ?= $color-default
 
-$color-active ?= hsl(88, 71%, 53%)
-$color-active-dark ?= hsl(88, 71%, 70%)
-$color-text-active ?= $color-active-dark
+$color-active ?= #C4F291
+$color-active-dark ?= darken($color-active, 50%)
+$color-text-active ?= darken($color-active-dark, 60%)
 
 $color-shadow ?= $color-text-default-secondary

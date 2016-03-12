@@ -1,0 +1,37 @@
+.product
+	padding: $spacing-unit-double
+	border: 1px solid $color-text-default-divider
+	box-shadow: 0 2px 5px -2px $color-text-default-divider
+
+	&__main
+		align-items: center
+		display: flex
+
+	&__details
+		display: flex
+		align-items: flex-end
+		border-top: 1px solid alpha($color-text-default-divider, .1)
+		margin-top: $spacing-unit
+		padding-top: $spacing-unit
+
+		&__fares
+			flex: 1
+
+	&__price
+		text-align: right
+		margin-right: $spacing-unit-double
+
+		_price()
+
+	&__logo
+		margin-right: $spacing-unit-double
+
+	&__expand
+		_button()
+
+	&__cta
+		_button($color-cta)
+
+	&__info
+	&__price
+		flex: 1

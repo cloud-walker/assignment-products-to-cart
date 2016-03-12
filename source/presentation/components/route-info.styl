@@ -1,0 +1,33 @@
+.route-info
+	$line-size = 4px
+
+	font-size: .9rem
+	border-spacing: ($spacing-unit / 4)
+
+	td
+		position: relative
+
+	&__body
+		position: relative
+
+		&__line
+			position: absolute
+			top: -($spacing-unit / 2)
+			left: 50%
+			margin-left: -($line-size / 2)
+			width: $line-size
+			height: $spacing-unit * 2
+			background-color: $color-trenitalia
+
+	&__head
+	&__tail
+		border: $line-size solid $color-trenitalia
+		width: 12px
+		height: @width
+		border-radius: 50%
+
+	&__departure
+	&__arrival
+	&__from
+	&__to
+		font-weight: bold

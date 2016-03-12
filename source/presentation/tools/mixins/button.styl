@@ -1,0 +1,17 @@
+_button($bg = $color-primary, $fg = $color-text-primary)
+	background-color: $bg
+	color: $fg
+	font-weight: 800
+	font-size: 1.1rem
+	letter-spacing: -.05rem
+	border-radius: .2rem
+	border: 0
+	padding: ($spacing-unit / 2) $spacing-unit
+	box-shadow: 0 2px 0 0 darken($bg, 15%)
+
+	&:not(&--checked):hover
+		background-color: lighten($bg, 10%)
+
+	&--checked
+		background-color: $color-default-dark
+		box-shadow: inset 0 2px 0 0 darken(@background-color, 10%)

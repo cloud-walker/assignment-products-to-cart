@@ -5,20 +5,268 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Products to Cart</title>
 
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="/index.css">
 	</head>
 
 	<body>
 		<div id="content">
 			<div class="container">
 				<div class="products">
-					<div class="products__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In maxime dolorum doloremque natus cupiditate sint unde consequatur quo vitae non sapiente minus animi, est magnam quos cum, tempora ut dolor!</div>
-					<div class="products__item">Harum vero aliquid, minima nesciunt laborum vel quasi laboriosam tempora totam accusamus maxime autem, ducimus vitae asperiores sequi aperiam sunt facere ratione et voluptatibus quas corporis molestiae at. Voluptates, fugiat!</div>
-					<div class="products__item">Similique sequi, enim officiis! Facilis iusto modi corporis officia harum quod deserunt porro, animi ipsa quo voluptate, ad dicta accusantium maiores delectus eum, dolores dolorum. Accusantium, illum distinctio rem fugit.</div>
+					<div class="products__item">
+						<div class="product">
+							<div class="product__main">
+								<div class="product__logo product-logo">
+									<img src="/logo_trenitalia.gif" alt="trenitalia">
+								</div>
+
+								<table class="route-info route-info--trenitalia">
+									<tbody>
+										<tr>
+											<td class="route-info__departure">05:02</td>
+											<td><div class="route-info__head"></div></td>
+											<td class="route-info__from">Roma Termini</td>
+										</tr>
+										<tr class="small-muted">
+											<td class="route-info__duration">3h 06m</td>
+											<td class="route-info__body">
+												<div class="route-info__body__line"></div>
+											</td>
+											<td class="route-info__train">Frecciarossa 9504</td>
+										</tr>
+										<tr>
+											<td class="route-info__arrival">09:08</td>
+											<td><div class="route-info__tail"></div></td>
+											<td class="route-info__to">Milano Centrale</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="product__price">
+									<span class="product__price__amount">
+										€
+										<span class="product__price__int">59</span>
+										<span class="product__price__dec">.00</span>
+									</span>
+									<div class="small-muted">per adulto</div>
+								</div>
+								<input type="button" value="Seleziona" class="product__expand">
+							</div>
+						</div>
+					</div>
+
+					<div class="products__item">
+						<div class="product">
+							<div class="product__main">
+								<div class="product__logo product-logo">
+									<img src="/logo_italo.png" alt="italo">
+								</div>
+								<div class="route-info">info</div>
+								<div class="product__price">Prezzo</div>
+								<input
+									type="button"
+									value="Seleziona"
+									class="product__expand product__expand--checked"
+								>
+							</div>
+
+							<div class="product__details">
+								<div class="product__details__fares">
+									<table class="fares-table">
+										<thead>
+											<tr>
+												<th></th>
+												<th class="fares-table__class">Seconda</th>
+												<th class="fares-table__class">Prima</th>
+												<th class="fares-table__class">Business</th>
+												<th class="fares-table__class">Club</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th class="fares-table__fare">SuperEconomy</th>
+												<td class="fares-table__choice fares-table__choice--empty">_</td>
+												<td class="fares-table__choice fares-table__choice--empty">_</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">59</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">99</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="fares-table__fare">Standard</th>
+												<td class="fares-table__choice fares-table__choice--active">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">49</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">59</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">69</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">109</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th class="fares-table__fare">Flex</th>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">59</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">69</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">79</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+												<td class="fares-table__choice">
+													<div class="fares-table__price">
+														<div class="fares-table__price__amount">
+															€
+															<span class="fares-table__price__int">219</span>
+															<span class="fares-table__price__dec">.99</span>
+														</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<input type="button" value="Continua" class="product__cta">
+							</div>
+						</div>
+					</div>
+
+					<div class="products__item">
+						<div class="product">
+							<div class="product__main">
+								<div class="product__logo product-logo">
+									<img src="/logo_trenitalia.gif" alt="trenitalia">
+								</div>
+								<div class="route-info">info</div>
+								<div class="product__price">Prezzo</div>
+								<input type="button" value="Seleziona" class="product__expand">
+							</div>
+						</div>
+					</div>
 				</div>
 
-				<div class="cart">
-					<strong>CARRELLO</strong>
+				<div class="sidebar">
+					<div class="cart">
+						<div class="cart__header">CARRELLO</div>
+						<div class="cart__content">
+							<div class="cart__content__header">
+								<div class="cart__logo product-logo">
+									<img src="/logo_italo.png" alt="italo">
+								</div>
+
+								<div class="cart__price">
+									<div class="cart__price__amount">
+										€
+										<span class="cart__price__int">59</span>
+										<span class="cart__price__dec">.00</span>
+									</div>
+								</div>
+							</div>
+
+							<table class="route-info route-info--trenitalia">
+								<tbody>
+									<tr>
+										<td class="route-info__departure">05:02</td>
+										<td><div class="route-info__head"></div></td>
+										<td class="route-info__from">Roma Termini</td>
+									</tr>
+									<tr class="small-muted">
+										<td class="route-info__duration">3h 06m</td>
+										<td class="route-info__body">
+											<div class="route-info__body__line"></div>
+										</td>
+										<td class="route-info__train">Frecciarossa 9504</td>
+									</tr>
+									<tr>
+										<td class="route-info__arrival">09:08</td>
+										<td><div class="route-info__tail"></div></td>
+										<td class="route-info__to">Milano Centrale</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="cart__content__footer">
+								<div class="cart__class">
+									CLASSE <strong class="cart__class__value">Prima</strong>
+								</div>
+								<div class="cart__fare">
+									TARIFFA <strong class="cart__fare__value">Flex</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="checkout">
+						<div class="checkout__price">
+							<div class="checkout__price__amount">
+								€
+								<span class="checkout__price__int">59</span>
+								<span class="checkout__price__dec">.00</span>
+							</div>
+						</div>
+
+						<input type="button" value="Checkout" class="checkout__cta">
+					</div>
 				</div>
 			</div>
 		</div>

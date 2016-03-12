@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700,300|Open+Sans+Condensed:300,300italic,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic')
 @require 'presentation'
 
 .container
@@ -7,15 +8,27 @@
 .products
 	flex: 1
 
-	&__item
-		padding: $spacing-unit
-		border: 1px solid $color-text-default-divider
-		box-shadow: 0 2px 5px -2px $color-text-default-divider
-
-		& + &
-			margin-top: @padding
-.cart
-	padding: $spacing-unit
-	border: 1px solid $color-text-default-divider
-	box-shadow: 0 2px 5px -2px $color-text-default-divider
+.sidebar
+	flex-basis: 320px
 	margin-left: $spacing-unit-double
+
+.checkout
+	margin-top: $spacing-unit
+
+.prova
+	width: 3.783rem
+
+	&:focus
+		outline: 0
+
+	&:after
+		content: 'Seleziona'
+		background-color: white
+		outline: 0
+		border: 1px solid $color-text-default-divider
+
+	&:hover:after
+		border-color: $color-text-default-disabled
+
+	&:checked:after
+		background-color: grey

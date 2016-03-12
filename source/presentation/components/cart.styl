@@ -1,0 +1,30 @@
+.cart
+	border: 1px solid $color-text-default-divider
+	box-shadow: 0 2px 5px -2px $color-text-default-divider
+
+	&__header
+		border-bottom: 1px solid $color-text-default-divider
+		font-size: $font-size-copy-small
+		font-weight: bold
+
+	&__content
+		&__header
+			display: flex
+			margin-bottom: $spacing-unit
+
+		&__footer
+			display: flex
+			margin-top: $spacing-unit
+			font-size: $font-size-copy-small
+
+	&__class
+		margin-right: $spacing-unit
+
+	&__price
+		flex: 1
+		text-align: right
+		_price(1.2rem)
+
+	&__header
+	&__content
+		padding: $spacing-unit

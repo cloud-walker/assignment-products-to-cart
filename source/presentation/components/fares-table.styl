@@ -1,0 +1,31 @@
+.fares-table
+	border-spacing: ($spacing-unit / 2)
+
+	&__fare
+		text-align: right
+
+	&__price
+		_price(1.2rem)
+
+	&__choice
+		padding: ($spacing-unit / 4) ($spacing-unit / 2)
+		background-color: #ECECEC
+		border: 1px solid @background-color
+		text-align: center
+		cursor: pointer
+
+		&:not(&--empty):not(&--active):hover
+			border-color: darken(@background-color, 5%)
+
+		&--empty
+			background-color: inherit
+
+		&--active
+			background-color: $color-active
+			color: $color-text-active
+			border-color: alpha($color-text-active, .3)
+
+	&__class
+	&__fare
+		font-weight: normal
+		font-size: $font-size-copy-small
