@@ -7,6 +7,28 @@
 	td
 		position: relative
 
+	&__train
+		&:first-letter
+			text-transform: uppercase
+
+	&--trenitalia
+		.route-info
+			&__body__line
+				background-color: $color-trenitalia
+
+			&__head
+			&__tail
+				border-color: $color-trenitalia
+
+	&--italotreno
+		.route-info
+			&__body__line
+				background-color: $color-italo
+
+			&__head
+			&__tail
+				border-color: $color-italo
+
 	&__body
 		position: relative
 
@@ -17,14 +39,13 @@
 			margin-left: -($line-size / 2)
 			width: $line-size
 			height: $spacing-unit * 2
-			background-color: $color-trenitalia
 
 	&__head
 	&__tail
-		border: $line-size solid $color-trenitalia
 		width: 12px
 		height: @width
 		border-radius: 50%
+		border: $line-size solid
 
 	&__departure
 	&__arrival
