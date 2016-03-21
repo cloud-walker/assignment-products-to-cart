@@ -7,6 +7,28 @@
 	td
 		position: relative
 
+	&__train
+		&:first-letter
+			text-transform: uppercase
+
+	&--trenitalia
+		.route-info
+			&__body__line
+				background-color: $color-trenitalia
+
+			&__head
+			&__tail
+				border-color: $color-trenitalia
+
+	&--italotreno
+		.route-info
+			&__body__line
+				background-color: $color-italo
+
+			&__head
+			&__tail
+				border-color: $color-italo
+
 	&__body
 		position: relative
 

@@ -1,10 +1,17 @@
 import React, {Component, PropTypes} from 'react'
 import {Observable as $$} from 'rx'
+import RouteInfo from './RouteInfo'
 
 class Product extends Component {
 	static propTypes = {
 		agency: PropTypes.string.isRequired,
 		number: PropTypes.string.isRequired,
+		category: PropTypes.string.isRequired,
+		from: PropTypes.string.isRequired,
+		to: PropTypes.string.isRequired,
+		duration: PropTypes.string.isRequired,
+		arrivalTime: PropTypes.string.isRequired,
+		departureTime: PropTypes.string.isRequired,
 		current: PropTypes.object
 	}
 
@@ -46,7 +53,14 @@ class Product extends Component {
 
 	handleAddToCart() {
 		this.props.onAddToCart({
-			agency: this.props.agency
+			agency: this.props.agency,
+			duration: this.props.duration,
+			arrivalTime: this.props.arrivalTime,
+			departureTime: this.props.departureTime,
+			from: this.props.from,
+			to: this.props.to,
+			number: this.props.number,
+			category: this.props.category
 		}, this.state.price)
 	}
 
@@ -148,7 +162,16 @@ class Product extends Component {
 					</div>
 
 					<div className="product__info">
-						{this.props.category} {this.props.number} infos
+						<RouteInfo
+							agency={this.props.agency}
+							departureTime={this.props.departureTime}
+							arrivalTime={this.props.arrivalTime}
+							from={this.props.from}
+							to={this.props.to}
+							duration={this.props.duration}
+							number={this.props.number}
+							category={this.props.category}
+						/>
 					</div>
 
 					<div className="product__price">

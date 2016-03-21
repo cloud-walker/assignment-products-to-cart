@@ -1,6 +1,22 @@
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
+import RouteInfo from './RouteInfo'
 
 class Cart extends Component {
+	static propTypes = {
+		agency: PropTypes.string.isRequired,
+		departureTime: PropTypes.string.isRequired,
+		arrivalTime: PropTypes.string.isRequired,
+		from: PropTypes.string.isRequired,
+		to: PropTypes.string.isRequired,
+		duration: PropTypes.string.isRequired,
+		number: PropTypes.string.isRequired,
+		category: PropTypes.string.isRequired,
+	}
+
+	constructor(props) {
+		super(props)
+	}
+
 	render() {
 		return (
 			<div className="cart">
@@ -25,6 +41,16 @@ class Cart extends Component {
 							</div>
 						</div>
 					</div>
+
+					<RouteInfo
+						departureTime={this.props.departureTime}
+						arrivalTime={this.props.arrivalTime}
+						from={this.props.from}
+						to={this.props.to}
+						duration={this.props.duration}
+						number={this.props.number}
+						category={this.props.category}
+					/>
 
 					<div className="cart__content__footer">
 						<div className="cart__class">
