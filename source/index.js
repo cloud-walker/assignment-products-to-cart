@@ -1,7 +1,9 @@
 import React from 'react'
 import {render} from 'react-dom'
+import {products} from './storage'
+import Main from './components/Main'
 
 const root = document.getElementById('content')
-const dom = <div>React init.</div>
+const vdom = <Main products={products} />
 
-render(dom, root)
+render(vdom, root)
