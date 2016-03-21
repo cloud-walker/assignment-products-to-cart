@@ -23,7 +23,6 @@ class Product extends Component {
 
 		this.state = {
 			expanded: false,
-			current: this.props.current,
 			price: this.calculateBestPrice(this.props.classes)
 		}
 	}
@@ -55,7 +54,7 @@ class Product extends Component {
 	}
 
 	handleAddToCart() {
-		this.props.onAddToCart({
+		const current = {
 			agency: this.props.agency,
 			duration: this.props.duration,
 			arrivalTime: this.props.arrivalTime,
@@ -64,7 +63,10 @@ class Product extends Component {
 			to: this.props.to,
 			number: this.props.number,
 			category: this.props.category
-		}, this.state.price)
+		}
+
+		this.setState({expanded: current.number != this.props.number})
+		this.props.onAddToCart(current, this.state.price)
 	}
 
 	handleUpdatePrice(_class, fare, price) {
@@ -117,10 +119,34 @@ class Product extends Component {
 		return res
 	}
 
+	generateExpandButton() {
+		const current = this.props.current
+		const number = this.props.number
+		let className = 'product__expand'
+		let value = 'Seleziona'
+
+		if (this.state.expanded) {
+			className += ' product__expand--checked'
+		}
+		if (current && current.number == number) {
+			className += ' product__expand--selected'
+			value = 'Selezionato'
+		}
+
+		return <input
+			className={className}
+			onClick={this.handleExpand.bind(this)}
+			type="button"
+			value={value}
+		/>
+	}
+
 	render() {
+		console.log(this.props.current)
+		const current = this.props.current
 		const classes = this.props.classes
 		const price = this.state.price ? this.state.price.price.amount : 0
-		const details = !this.state.expanded ? false : (
+		const details = !this.state.expanded || (current && current.number == this.props.number) ? false : (
 			<div className="product__details">
 				<div className="product__details__fares">
 					<table className="fares-table">
@@ -185,12 +211,7 @@ class Product extends Component {
 						</div>
 					</div>
 
-					<input
-						className="product__expand"
-						onClick={this.handleExpand.bind(this)}
-						type="button"
-						value="Seleziona"
-					/>
+					{this.generateExpandButton()}
 				</div>
 
 				{details}
