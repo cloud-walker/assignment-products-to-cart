@@ -187,7 +187,7 @@ class Product extends Component {
 			<div className="product">
 				<div className="product__main">
 					<div className="product__logo product-logo">
-						<img src={`/logo_${this.props.agency}.png`} alt={this.agency} />
+						<img src={`logo_${this.props.agency}.png`} alt={this.agency} />
 					</div>
 
 					<div className="product__info">

@@ -28,7 +28,7 @@ class Cart extends Component {
 					<div className="cart__content__header">
 						<div className="product-logo">
 							<img
-								src={`/logo_${this.props.agency}.png`}
+								src={`logo_${this.props.agency}.png`}
 								alt={this.props.agency}
 							/>
 						</div>
