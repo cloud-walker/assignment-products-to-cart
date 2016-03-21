@@ -1111,7 +1111,7 @@ module.exports = performanceNow;
  *
  * @providesModule shallowEqual
  * @typechecks
- * 
+ *
  */
 
 'use strict';
@@ -1275,7 +1275,7 @@ module.exports = warning;
 
 },{"./emptyFunction":"/home/luca/dev/assignment-products-to-cart/node_modules/fbjs/lib/emptyFunction.js","_process":"/home/luca/dev/assignment-products-to-cart/node_modules/process/browser.js"}],"/home/luca/dev/assignment-products-to-cart/node_modules/moment-duration-format/lib/moment-duration-format.js":[function(require,module,exports){
 /*! Moment Duration Format v1.3.0
- *  https://github.com/jsmreese/moment-duration-format 
+ *  https://github.com/jsmreese/moment-duration-format
  *  Date: 2014-07-15
  *
  *  Duration format plugin function for the Moment.js library
@@ -1291,21 +1291,21 @@ module.exports = warning;
 	// returns "0" repeated qty times
 	function repeatZero(qty) {
 		var result = "";
-		
+
 		// exit early
 		// if qty is 0 or a negative number
 		// or doesn't coerce to an integer
 		qty = parseInt(qty, 10);
 		if (!qty || qty < 1) { return result; }
-		
+
 		while (qty) {
 			result += "0";
 			qty -= 1;
 		}
-		
+
 		return result;
 	}
-	
+
 	// padZero(str, len [, isRight])
 	// pads a string with zeros up to a specified length
 	// will not pad a string if its length is aready
@@ -1315,20 +1315,20 @@ module.exports = warning;
 	function padZero(str, len, isRight) {
 		if (str == null) { str = ""; }
 		str = "" + str;
-		
+
 		return (isRight ? str : "") + repeatZero(len - str.length) + (isRight ? "" : str);
 	}
-	
+
 	// isArray
 	function isArray(array) {
 		return Object.prototype.toString.call(array) === "[object Array]";
 	}
-	
+
 	// isObject
 	function isObject(obj) {
 		return Object.prototype.toString.call(obj) === "[object Object]";
 	}
-	
+
 	// findLast
 	function findLast(array, callback) {
 		var index = array.length;
@@ -1343,7 +1343,7 @@ module.exports = warning;
 		var index = 0,
 			max = array.length,
 			match;
-			
+
 		if (typeof callback !== "function") {
 			match = callback;
 			callback = function (item) {
@@ -1356,12 +1356,12 @@ module.exports = warning;
 			index += 1;
 		}
 	}
-	
+
 	// each
 	function each(array, callback) {
 		var index = 0,
 			max = array.length;
-			
+
 		if (!array || !max) { return; }
 
 		while (index < max) {
@@ -1369,7 +1369,7 @@ module.exports = warning;
 			index += 1;
 		}
 	}
-	
+
 	// map
 	function map(array, callback) {
 		var index = 0,
@@ -1377,103 +1377,103 @@ module.exports = warning;
 			ret = [];
 
 		if (!array || !max) { return ret; }
-				
+
 		while (index < max) {
 			ret[index] = callback(array[index], index);
 			index += 1;
 		}
-		
+
 		return ret;
 	}
-	
+
 	// pluck
 	function pluck(array, prop) {
 		return map(array, function (item) {
 			return item[prop];
 		});
 	}
-	
+
 	// compact
 	function compact(array) {
 		var ret = [];
-		
+
 		each(array, function (item) {
 			if (item) { ret.push(item); }
 		});
-		
+
 		return ret;
 	}
-	
+
 	// unique
 	function unique(array) {
 		var ret = [];
-		
+
 		each(array, function (_a) {
 			if (!find(ret, _a)) { ret.push(_a); }
 		});
-		
+
 		return ret;
 	}
-	
+
 	// intersection
 	function intersection(a, b) {
 		var ret = [];
-		
+
 		each(a, function (_a) {
 			each(b, function (_b) {
 				if (_a === _b) { ret.push(_a); }
 			});
 		});
-		
+
 		return unique(ret);
 	}
-	
+
 	// rest
 	function rest(array, callback) {
 		var ret = [];
-		
+
 		each(array, function (item, index) {
 			if (!callback(item)) {
 				ret = array.slice(index);
 				return false;
 			}
 		});
-		
+
 		return ret;
 	}
 
 	// initial
 	function initial(array, callback) {
 		var reversed = array.slice().reverse();
-		
+
 		return rest(reversed, callback).reverse();
 	}
-	
+
 	// extend
 	function extend(a, b) {
 		for (var key in b) {
 			if (b.hasOwnProperty(key)) { a[key] = b[key]; }
 		}
-		
+
 		return a;
 	}
-			
+
 	// define internal moment reference
 	var moment;
 
 	if (typeof require === "function") {
-		try { moment = require('moment'); } 
+		try { moment = require('moment'); }
 		catch (e) {}
-	} 
-	
+	}
+
 	if (!moment && root.moment) {
 		moment = root.moment;
 	}
-	
+
 	if (!moment) {
 		throw "Moment Duration Format cannot find Moment.js";
 	}
-	
+
 	// moment.duration.format([template] [, precision] [, settings])
 	moment.duration.fn.format = function () {
 
@@ -1599,7 +1599,7 @@ module.exports = warning;
 			// update remainder
 			remainder.subtract(wholeValue, momentType);
 		});
-	
+
 		// trim tokens array
 		if (settings.trim) {
 			tokens = (settings.trim === "left" ? rest : initial)(tokens, function (token) {
@@ -1609,8 +1609,8 @@ module.exports = warning;
 				return !(token.isLeast || (token.type != null && token.wholeValue));
 			});
 		}
-		
-		
+
+
 		// build output
 
 		// the first moment token can have special handling
@@ -1636,7 +1636,7 @@ module.exports = warning;
 			} else {
 				val = token.wholeValue.toString();
 			}
-			
+
 			// remove negative sign from the beginning
 			val = val.replace(/^\-/, "");
 
@@ -1653,20 +1653,20 @@ module.exports = warning;
 					case 1:
 						val += "." + padZero(decVal[0], settings.precision, true).slice(0, settings.precision);
 						break;
-						
+
 					case 2:
-						val += "." + padZero(decVal[1], settings.precision, true).slice(0, settings.precision);		
+						val += "." + padZero(decVal[1], settings.precision, true).slice(0, settings.precision);
 						break;
-						
+
 					case 3:
-						val += "." + padZero(repeatZero((+decVal[2]) - 1) + (decVal[0] || "0") + decVal[1], settings.precision, true).slice(0, settings.precision);		
+						val += "." + padZero(repeatZero((+decVal[2]) - 1) + (decVal[0] || "0") + decVal[1], settings.precision, true).slice(0, settings.precision);
 						break;
-					
+
 					default:
 						throw "Moment Duration Format: unable to parse token decimal value.";
 				}
 			}
-			
+
 			// add a negative sign if the value is negative and token is most significant
 			if (token.isMost && token.value < 0) {
 				val = "-" + val;
@@ -23397,7 +23397,7 @@ module.exports = require('./lib/React');
   function cloneArray(arr) { for(var a = [], i = 0, len = arr.length; i < len; i++) { a.push(arr[i]); } return a;}
 
   var errorObj = {e: {}};
-  
+
   function tryCatcherGen(tryCatchTarget) {
     return function tryCatcher() {
       try {
@@ -25837,7 +25837,7 @@ var ObserveOnObservable = (function (__super__) {
       this.a = [];
       AbstractObserver.call(this);
     }
-    
+
     InnerObserver.prototype.next = function (x) { this.a.push(x); };
     InnerObserver.prototype.error = function (e) { this.o.onError(e);  };
     InnerObserver.prototype.completed = function () { this.o.onNext(this.a); this.o.onCompleted(); };
@@ -26225,7 +26225,7 @@ var ObserveOnObservable = (function (__super__) {
           observer.onNext(changes[i]);
         }
       }
-      
+
       Array.observe(array, observerFn);
 
       return function () {
@@ -30828,7 +30828,7 @@ function createCbHandler(o, ctx, selector) {
  */
 Observable.fromCallback = function (fn, ctx, selector) {
   return function () {
-    typeof ctx === 'undefined' && (ctx = this); 
+    typeof ctx === 'undefined' && (ctx = this);
 
     var len = arguments.length, args = new Array(len)
     for(var i = 0; i < len; i++) { args[i] = arguments[i]; }
@@ -30878,7 +30878,7 @@ function createNodeHandler(o, ctx, selector) {
  */
 Observable.fromNodeCallback = function (fn, ctx, selector) {
   return function () {
-    typeof ctx === 'undefined' && (ctx = this); 
+    typeof ctx === 'undefined' && (ctx = this);
     var len = arguments.length, args = new Array(len);
     for(var i = 0; i < len; i++) { args[i] = arguments[i]; }
     return createNodeObservable(fn, ctx, selector, args);
@@ -31216,7 +31216,7 @@ Observable.fromNodeCallback = function (fn, ctx, selector) {
               o.onCompleted();
             }
           );
-      return subscription;      
+      return subscription;
     };
 
     PausableBufferedObservable.prototype.pause = function () {
@@ -32222,10 +32222,10 @@ Observable.fromNodeCallback = function (fn, ctx, selector) {
     };
     return WhileEnumerable;
   }(Enumerable));
-  
+
   function enumerableWhile(condition, source) {
     return new WhileEnumerable(condition, source);
-  }  
+  }
 
    /**
    *  Returns an observable sequence that is the result of invoking the selector on the source sequence, without sharing subscriptions.
@@ -32239,7 +32239,7 @@ Observable.fromNodeCallback = function (fn, ctx, selector) {
   };
 
    /**
-   *  Determines whether an observable collection contains values. 
+   *  Determines whether an observable collection contains values.
    *
    * @example
    *  1 - res = Rx.Observable.if(condition, obs1);
@@ -35785,7 +35785,7 @@ var Cart = function (_Component) {
 							'div',
 							{ className: 'product-logo' },
 							_react2.default.createElement('img', {
-								src: '/logo_' + this.props.agency + '.png',
+								src: 'logo_' + this.props.agency + '.png',
 								alt: this.props.agency
 							})
 						),
@@ -36278,7 +36278,7 @@ var Product = function (_Component) {
 					_react2.default.createElement(
 						'div',
 						{ className: 'product__logo product-logo' },
-						_react2.default.createElement('img', { src: '/logo_' + this.props.agency + '.png', alt: this.agency })
+						_react2.default.createElement('img', { src: 'logo_' + this.props.agency + '.png', alt: this.agency })
 					),
 					_react2.default.createElement(
 						'div',
