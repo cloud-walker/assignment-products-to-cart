@@ -1,5 +1,8 @@
 import React, {Component, PropTypes} from 'react'
 import {Observable as $$} from 'rx'
+import moment from 'moment'
+import 'moment/locale/it'
+import 'moment-duration-format'
 import RouteInfo from './RouteInfo'
 
 class Product extends Component {
@@ -19,7 +22,7 @@ class Product extends Component {
 		super(props)
 
 		this.state = {
-			expanded: true,
+			expanded: false,
 			current: this.props.current,
 			price: this.calculateBestPrice(this.props.classes)
 		}

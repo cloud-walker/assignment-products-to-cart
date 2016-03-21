@@ -43,6 +43,7 @@ class Cart extends Component {
 					</div>
 
 					<RouteInfo
+						agency={this.props.agency}
 						departureTime={this.props.departureTime}
 						arrivalTime={this.props.arrivalTime}
 						from={this.props.from}
