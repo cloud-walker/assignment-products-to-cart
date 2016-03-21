@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gulp deploy"
   },
   "dependencies": {
     "babel-core": "^6.7.0",

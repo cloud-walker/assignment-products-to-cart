@@ -21,6 +21,16 @@ const errorHandler = notify.onError({
 	message: '<%= error %>'
 })
 
+gulp.task('js', () => {
+	const b = browserify(browserifyConfig)
+
+	b.add(entry)
+
+	b.transform(babelify)
+
+	return generateBundle(b)
+})
+
 gulp.task('js:watch', () => {
 	const b = browserify(browserifyConfig)
 

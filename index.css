@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700,300|Open+Sans+Condensed:300,300italic,700|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+img {
+  border: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: rgba(0,0,0,0.87);
+  overflow-y: scroll;
+  min-height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+.container {
+  padding: 4.25rem;
+}
+.products__item + .products__item {
+  margin-top: 1.0625rem;
+}
+.cart {
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px -2px rgba(0,0,0,0.2);
+}
+.cart__header {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.cart__content__header {
+  display: flex;
+  margin-bottom: 1.0625rem;
+}
+.cart__content__footer {
+  display: flex;
+  margin-top: 1.0625rem;
+  font-size: 0.8rem;
+}
+.cart__class {
+  margin-right: 1.0625rem;
+}
+.cart__price {
+  flex: 1;
+  text-align: right;
+}
+.cart__price__amount {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+.cart__price__int {
+  padding-left: 0.265625rem;
+  font-size: 1.4rem;
+}
+.cart__price__dec {
+  font-size: 1rem;
+}
+.cart__header,
+.cart__content {
+  padding: 1.0625rem;
+}
+.checkout {
+  display: flex;
+}
+.checkout__price {
+  flex: 1;
+  text-align: right;
+  margin-right: 1.0625rem;
+}
+.checkout__price__amount {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+}
+.checkout__price__int {
+  padding-left: 0.265625rem;
+  font-size: 1.7rem;
+}
+.checkout__price__dec {
+  font-size: 1.3rem;
+}
+.checkout__cta {
+  background-color: #f63;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.05rem;
+  border-radius: 0.2rem;
+  border: 0;
+  padding: 0.53125rem 1.0625rem;
+  box-shadow: 0 2px 0 0 #ff4405;
+}
+.checkout__cta:not(.checkout__cta--checked):not(.checkout__cta--selected):hover {
+  background-color: #ff7547;
+}
+.checkout__cta--checked {
+  background-color: #cfcfcf;
+  box-shadow: inset 0 2px 0 0 #bababa;
+}
+.checkout__cta--selected {
+  background-color: #65ad14;
+  box-shadow: 0 2px 0 0 #569311;
+}
+.checkout__cta--selected:hover {
+  background-color: #76c917;
+}
+.product {
+  padding: 2.125rem;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px -2px rgba(0,0,0,0.2);
+}
+.product__main {
+  align-items: center;
+  display: flex;
+}
+.product__details {
+  display: flex;
+  align-items: flex-end;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-top: 1.0625rem;
+  padding-top: 1.0625rem;
+}
+.product__details__fares {
+  flex: 1;
+}
+.product__price {
+  text-align: right;
+  margin-right: 2.125rem;
+}
+.product__price__amount {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+}
+.product__price__int {
+  padding-left: 0.265625rem;
+  font-size: 1.7rem;
+}
+.product__price__dec {
+  font-size: 1.3rem;
+}
+.product__logo {
+  margin-right: 2.125rem;
+}
+.product__expand {
+  background-color: #06adea;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.05rem;
+  border-radius: 0.2rem;
+  border: 0;
+  padding: 0.53125rem 1.0625rem;
+  box-shadow: 0 2px 0 0 #0593c7;
+}
+.product__expand:not(.product__expand--checked):not(.product__expand--selected):hover {
+  background-color: #12bbf9;
+}
+.product__expand--checked {
+  background-color: #cfcfcf;
+  box-shadow: inset 0 2px 0 0 #bababa;
+}
+.product__expand--selected {
+  background-color: #65ad14;
+  box-shadow: 0 2px 0 0 #569311;
+}
+.product__expand--selected:hover {
+  background-color: #76c917;
+}
+.product__cta {
+  background-color: #f63;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.05rem;
+  border-radius: 0.2rem;
+  border: 0;
+  padding: 0.53125rem 1.0625rem;
+  box-shadow: 0 2px 0 0 #ff4405;
+}
+.product__cta:not(.product__cta--checked):not(.product__cta--selected):hover {
+  background-color: #ff7547;
+}
+.product__cta--checked {
+  background-color: #cfcfcf;
+  box-shadow: inset 0 2px 0 0 #bababa;
+}
+.product__cta--selected {
+  background-color: #65ad14;
+  box-shadow: 0 2px 0 0 #569311;
+}
+.product__cta--selected:hover {
+  background-color: #76c917;
+}
+.product__info,
+.product__price {
+  flex: 1;
+}
+.product-logo {
+  max-width: 100px;
+}
+.route-info {
+  font-size: 0.9rem;
+  border-spacing: 0.265625rem;
+}
+.route-info td {
+  position: relative;
+}
+.route-info__train:first-letter {
+  text-transform: uppercase;
+}
+.route-info--trenitalia .route-info__body__line {
+  background-color: #006367;
+}
+.route-info--trenitalia .route-info__head,
+.route-info--trenitalia .route-info__tail {
+  border-color: #006367;
+}
+.route-info--italotreno .route-info__body__line {
+  background-color: #b11e08;
+}
+.route-info--italotreno .route-info__head,
+.route-info--italotreno .route-info__tail {
+  border-color: #b11e08;
+}
+.route-info__body {
+  position: relative;
+}
+.route-info__body__line {
+  position: absolute;
+  top: -0.53125rem;
+  left: 50%;
+  margin-left: -2px;
+  width: 4px;
+  height: 2.125rem;
+}
+.route-info__head,
+.route-info__tail {
+  border: 4px solid;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.route-info__departure,
+.route-info__arrival,
+.route-info__from,
+.route-info__to {
+  font-weight: bold;
+}
+.fares-table {
+  border-spacing: 0.53125rem;
+}
+.fares-table__fare {
+  text-align: right;
+}
+.fares-table__price__amount {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+.fares-table__price__int {
+  padding-left: 0.265625rem;
+  font-size: 1.4rem;
+}
+.fares-table__price__dec {
+  font-size: 1rem;
+}
+.fares-table__choice {
+  padding: 0.265625rem 0.53125rem;
+  background-color: #ececec;
+  border: 1px solid #ececec;
+  text-align: center;
+  cursor: pointer;
+}
+.fares-table__choice:not(.fares-table__choice--empty):not(.fares-table__choice--active):hover {
+  border-color: #e0e0e0;
+}
+.fares-table__choice--empty {
+  background-color: inherit;
+}
+.fares-table__choice--active {
+  background-color: #c4f291;
+  color: #284508;
+  border-color: rgba(40,69,8,0.3);
+}
+.fares-table__class,
+.fares-table__fare {
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.small-muted {
+  color: rgba(0,0,0,0.54);
+  font-size: 0.8rem;
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+.products {
+  flex: 1;
+}
+.sidebar {
+  flex-basis: 320px;
+  margin-left: 2.125rem;
+}
+.checkout {
+  margin-top: 1.0625rem;
+}
+.prova {
+  width: 3.783rem;
+}
+.prova:focus {
+  outline: 0;
+}
+.prova:after {
+  content: 'Seleziona';
+  background-color: #fff;
+  outline: 0;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.prova:hover:after {
+  border-color: rgba(0,0,0,0.38);
+}
+.prova:checked:after {
+  background-color: #808080;
+}
